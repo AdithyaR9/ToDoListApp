@@ -9,8 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = LoginViewViewModel()   // abstracted email password authorization and authentication into model
     
     var body: some View {
         NavigationView {        // allows you to navigate between views
@@ -23,23 +22,20 @@ struct LoginView: View {
                 
                 // Login Form
                 Form {
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $viewModel.email)
+                        // modifiers
                         .textFieldStyle(DefaultTextFieldStyle())
-                    SecureField("Password", text: $password)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                    SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
-                    Button {
-                        // attempt log in
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.indigo)
-                            
-                            Text("Login")
-                                .foregroundColor(Color.white)
-                                .bold()
-                        }
+                    TDLButton(title: "Login", 
+                              background: .cyan) {
+                        // try to login
                     }
+                    .padding()
+                    
                 }
                 .offset(y: -50)
                 
