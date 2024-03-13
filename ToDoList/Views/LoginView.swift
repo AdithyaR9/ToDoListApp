@@ -16,7 +16,10 @@ struct LoginView: View {
         NavigationView {        // allows you to navigate between views
             VStack {    // vertical stack of items
                 //Header
-                HeaderView()
+                HeaderView(title: "To Do List",
+                           subTitle: "don't be lazy",
+                           angle: -20,
+                           background: .cyan)
                 
                 // Login Form
                 Form {
@@ -38,6 +41,7 @@ struct LoginView: View {
                         }
                     }
                 }
+                .offset(y: -50)
                 
                 // Create Account
                 VStack {
