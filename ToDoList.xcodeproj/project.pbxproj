@@ -50,6 +50,7 @@
 		EC7003282BA202C4007C5E16 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC7003272BA202C4007C5E16 /* FirebaseRemoteConfigSwift */; };
 		EC70032A2BA202C4007C5E16 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EC7003292BA202C4007C5E16 /* FirebaseStorage */; };
 		EC70032C2BA202C4007C5E16 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EC70032B2BA202C4007C5E16 /* FirebaseStorageCombine-Community */; };
+		EC70032E2BA2098A007C5E16 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70032D2BA2098A007C5E16 /* HeaderView.swift */; };
 		ECE550822BA130F60058F399 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE550812BA130F60058F399 /* ToDoListApp.swift */; };
 		ECE550842BA130F60058F399 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE550832BA130F60058F399 /* MainView.swift */; };
 		ECE550862BA130F70058F399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE550852BA130F70058F399 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		EC7002EB2BA20109007C5E16 /* NewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 		EC7002EC2BA20109007C5E16 /* ToDoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		EC7002ED2BA20109007C5E16 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		EC70032D2BA2098A007C5E16 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		ECE5507E2BA130F60058F399 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE550812BA130F60058F399 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		ECE550832BA130F60058F399 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				EC7002EC2BA20109007C5E16 /* ToDoListView.swift */,
 				EC7002ED2BA20109007C5E16 /* RegisterView.swift */,
 				ECE550832BA130F60058F399 /* MainView.swift */,
+				EC70032D2BA2098A007C5E16 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,10 +187,10 @@
 		ECE550802BA130F60058F399 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				EC7002E72BA20109007C5E16 /* Views */,
-				EC7002D82BA20101007C5E16 /* ViewModels */,
-				EC7002D32BA200ED007C5E16 /* Models */,
 				EC7002CE2BA20049007C5E16 /* Other */,
+				EC7002D32BA200ED007C5E16 /* Models */,
+				EC7002D82BA20101007C5E16 /* ViewModels */,
+				EC7002E72BA20109007C5E16 /* Views */,
 				ECE550872BA130F70058F399 /* Preview Content */,
 			);
 			path = ToDoList;
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7002E62BA20101007C5E16 /* LoginViewViewModel.swift in Sources */,
+				EC70032E2BA2098A007C5E16 /* HeaderView.swift in Sources */,
 				EC7002F12BA20109007C5E16 /* ToDoListItemView.swift in Sources */,
 				EC7002E52BA20101007C5E16 /* RegisterViewViewModel.swift in Sources */,
 				EC7002E22BA20101007C5E16 /* ToDoListItemViewViewModel.swift in Sources */,
