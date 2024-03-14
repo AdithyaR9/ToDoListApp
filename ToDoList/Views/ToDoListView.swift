@@ -26,9 +26,13 @@ struct ToDoListView: View {
             .toolbar {      // to make plus button at top to add more todos
                 Button {
                     // action
+                    viewModel.showingNewItemView = true
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $viewModel.showingNewItemView) {    // depending on if showwingnewitemveiw var is true or false
+                NewItemView(newItemPresented: $viewModel.showingNewItemView)
             }
         }
     }
