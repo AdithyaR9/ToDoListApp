@@ -9,9 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State var name = ""
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = RegisterViewViewModel()
     
     var body: some View {
         VStack {
@@ -22,19 +20,20 @@ struct RegisterView: View {
                        background: .green)
             
             Form {
-                TextField("Name", text: $name)      // $_ is the data property of the State var given above
+                TextField("Name", text: $viewModel.name)      // $_ is the data property of the State var given above
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
-                TextField("Email", text: $email)
+                TextField("Email", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
-                SecureField("Password", text: $password)   // secure field shows asterisks as it is required
+                SecureField("Password", text: $viewModel.password)   // secure field shows asterisks as it is required
                     .textFieldStyle(DefaultTextFieldStyle())
                 
                 TDLButton(title: "Create Account",
                           background: .green) {
                     // attempt registration
+                    viewModel.register()
                 }
                 .padding()
                 
