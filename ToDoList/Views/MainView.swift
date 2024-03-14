@@ -16,9 +16,23 @@ struct MainView: View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             // signed in
             // for now
-            ToDoListView()
+            accountView
         } else {
             LoginView()
+        }
+    }
+    
+    @ViewBuilder    // allows use to abstract this part of the view
+    var accountView: some View {
+        TabView {   // tab bar at bottome for each of views
+            ToDoListView(userId: viewModel.currentUserId)
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
         }
     }
 }
