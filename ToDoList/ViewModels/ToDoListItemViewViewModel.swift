@@ -8,7 +8,7 @@
 import Foundation
 
 // viewmodel for a single to do itemview on the to do list
-// secondary view model within the full to do list view (each row (item) in the to do list)
+// secondary view model within the full to do list view (each row (item))
 class ToDoListItemViewViewModel: ObservableObject {
     init() {}
 }

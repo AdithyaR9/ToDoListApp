@@ -25,13 +25,13 @@ class NewItemViewViewModel: ObservableObject {
         }
         
         // get current user id
-        guard let uID = Auth.auth().currentUser?.uid else {
+        guard let uId = Auth.auth().currentUser?.uid else {
             return
         }
         
         // create model
-        let newID = UUID().uuidString
-        let newItem = ToDoListItem(id: newID,
+        let newId = UUID().uuidString
+        let newItem = ToDoListItem(id: newId,
                                    title: title,
                                    deadlineDate: deadlineDate.timeIntervalSince1970,
                                    createdDate: Date().timeIntervalSince1970,
@@ -41,9 +41,9 @@ class NewItemViewViewModel: ObservableObject {
         let db = Firestore.firestore() // instance of database
         
         db.collection("users")
-            .document(uID)
+            .document(uId)
             .collection("todos")
-            .document(newID)
+            .document(newId)
             .setData(newItem.asDictionary())
         
     }
