@@ -22,7 +22,7 @@ class LoginViewViewModel: ObservableObject {
         }
         
         // try to log in
-        Auth.auth().signIn(withEmail: email, link: password)
+        Auth.auth().signIn(withEmail: email, password: password)
 
     }
     
